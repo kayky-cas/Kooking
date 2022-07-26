@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0304B12890AE39009BECEE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EE0304B02890AE39009BECEE /* .gitignore */; };
 		EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B72890A36D008AEC24 /* KookingApp.swift */; };
 		EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B92890A36D008AEC24 /* ContentView.swift */; };
 		EE9687BC2890A370008AEC24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9687BB2890A370008AEC24 /* Assets.xcassets */; };
 		EE9687BF2890A370008AEC24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9687BE2890A370008AEC24 /* Preview Assets.xcassets */; };
+		EE9687C62890A3CF008AEC24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE9687C52890A3CF008AEC24 /* GoogleService-Info.plist */; };
+		EE9687C92890A446008AEC24 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EE9687C82890A446008AEC24 /* FirebaseAuth */; };
+		EE9687CB2890A446008AEC24 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EE9687CA2890A446008AEC24 /* FirebaseFirestore */; };
+		EE9687CD2890A446008AEC24 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EE9687CC2890A446008AEC24 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EE9687B42890A36D008AEC24 /* Kooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9687B72890A36D008AEC24 /* KookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KookingApp.swift; sourceTree = "<group>"; };
 		EE9687B92890A36D008AEC24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE9687BB2890A370008AEC24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9687BE2890A370008AEC24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE9687C52890A3CF008AEC24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,15 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9687C92890A446008AEC24 /* FirebaseAuth in Frameworks */,
+				EE9687CB2890A446008AEC24 /* FirebaseFirestore in Frameworks */,
+				EE9687CD2890A446008AEC24 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0304AF2890AAF5009BECEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE9687B92890A36D008AEC24 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EE9687AB2890A36D008AEC24 = {
 			isa = PBXGroup;
 			children = (
+				EE0304B02890AE39009BECEE /* .gitignore */,
 				EE9687B62890A36D008AEC24 /* Kooking */,
 				EE9687B52890A36D008AEC24 /* Products */,
 			);
@@ -51,9 +70,10 @@
 		EE9687B62890A36D008AEC24 /* Kooking */ = {
 			isa = PBXGroup;
 			children = (
+				EE0304AF2890AAF5009BECEE /* Views */,
 				EE9687B72890A36D008AEC24 /* KookingApp.swift */,
-				EE9687B92890A36D008AEC24 /* ContentView.swift */,
 				EE9687BB2890A370008AEC24 /* Assets.xcassets */,
+				EE9687C52890A3CF008AEC24 /* GoogleService-Info.plist */,
 				EE9687BD2890A370008AEC24 /* Preview Content */,
 			);
 			path = Kooking;
@@ -83,6 +103,11 @@
 			dependencies = (
 			);
 			name = Kooking;
+			packageProductDependencies = (
+				EE9687C82890A446008AEC24 /* FirebaseAuth */,
+				EE9687CA2890A446008AEC24 /* FirebaseFirestore */,
+				EE9687CC2890A446008AEC24 /* FirebaseStorage */,
+			);
 			productName = Kooking;
 			productReference = EE9687B42890A36D008AEC24 /* Kooking.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = EE9687AB2890A36D008AEC24;
+			packageReferences = (
+				EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EE9687B52890A36D008AEC24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0304B12890AE39009BECEE /* .gitignore in Resources */,
 				EE9687BF2890A370008AEC24 /* Preview Assets.xcassets in Resources */,
 				EE9687BC2890A370008AEC24 /* Assets.xcassets in Resources */,
+				EE9687C62890A3CF008AEC24 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +367,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE9687C82890A446008AEC24 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EE9687CA2890A446008AEC24 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EE9687CC2890A446008AEC24 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE9687AC2890A36D008AEC24 /* Project object */;
 }
