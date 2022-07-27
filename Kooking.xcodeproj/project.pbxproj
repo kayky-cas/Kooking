@@ -16,6 +16,7 @@
 		EE0304B52890B125009BECEE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B42890B125009BECEE /* GoogleSignIn */; };
 		EE0304B72890B125009BECEE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B62890B125009BECEE /* GoogleSignInSwift */; };
 		EE0304BD2890B3D3009BECEE /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0304BC2890B3D3009BECEE /* AuthenticationViewModel.swift */; };
+		EE4A403B2891689B00CDAC36 /* RecipesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4A403A2891689B00CDAC36 /* RecipesAPI.swift */; };
 		EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B72890A36D008AEC24 /* KookingApp.swift */; };
 		EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B92890A36D008AEC24 /* ContentView.swift */; };
 		EE9687BC2890A370008AEC24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9687BB2890A370008AEC24 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EE0304B82890B174009BECEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EE0304BC2890B3D3009BECEE /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		EE4A403A2891689B00CDAC36 /* RecipesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAPI.swift; sourceTree = "<group>"; };
 		EE9687B42890A36D008AEC24 /* Kooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9687B72890A36D008AEC24 /* KookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KookingApp.swift; sourceTree = "<group>"; };
 		EE9687B92890A36D008AEC24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		EE4A40392891688700CDAC36 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A403A2891689B00CDAC36 /* RecipesAPI.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		EE9687AB2890A36D008AEC24 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		EE9687B62890A36D008AEC24 /* Kooking */ = {
 			isa = PBXGroup;
 			children = (
+				EE4A40392891688700CDAC36 /* Libs */,
 				A46A0EBE2890BF9A007153CF /* Models */,
 				EE0304B22890B004009BECEE /* ViewModels */,
 				EE0304AF2890AAF5009BECEE /* Views */,
@@ -216,6 +227,7 @@
 				EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */,
 				A43DD12B28916144002B8B6D /* Recipe.swift in Sources */,
 				EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */,
+				EE4A403B2891689B00CDAC36 /* RecipesAPI.swift in Sources */,
 				EE0304BD2890B3D3009BECEE /* AuthenticationViewModel.swift in Sources */,
 				A43DD13128916932002B8B6D /* IngredientsInRecipe.swift in Sources */,
 			);
