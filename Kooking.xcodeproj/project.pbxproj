@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A0EBF2890BFA5007153CF /* Ingredient.swift */; };
 		EE0304B12890AE39009BECEE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EE0304B02890AE39009BECEE /* .gitignore */; };
 		EE0304B52890B125009BECEE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B42890B125009BECEE /* GoogleSignIn */; };
 		EE0304B72890B125009BECEE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B62890B125009BECEE /* GoogleSignInSwift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A46A0EBF2890BFA5007153CF /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EE0304B82890B174009BECEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EE0304BC2890B3D3009BECEE /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A46A0EBE2890BF9A007153CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A46A0EBF2890BFA5007153CF /* Ingredient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EE0304AF2890AAF5009BECEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		EE9687B62890A36D008AEC24 /* Kooking */ = {
 			isa = PBXGroup;
 			children = (
+				A46A0EBE2890BF9A007153CF /* Models */,
 				EE0304B22890B004009BECEE /* ViewModels */,
 				EE0304AF2890AAF5009BECEE /* Views */,
 				EE9687B72890A36D008AEC24 /* KookingApp.swift */,
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */,
 				EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */,
 				EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */,
 				EE0304BD2890B3D3009BECEE /* AuthenticationViewModel.swift in Sources */,
