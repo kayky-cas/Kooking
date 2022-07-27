@@ -1,3 +1,5 @@
 Kooking/GoogleService-Info.plist
 Kooking/Info.plist
 
+server/node_modules/
+server/.env

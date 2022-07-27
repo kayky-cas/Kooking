@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct IngredientInRecipe: Codable {
-    var text: String
-    var quantity: Double?
-    var measure: String?
-    var food: String
-    var weight: Double?
+struct IngredientInRecipe: Identifiable, Codable {
+    let id: Int
+    let name: String
+    let amount: Double
+    let unit: String
 }

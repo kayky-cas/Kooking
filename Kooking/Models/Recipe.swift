@@ -7,12 +7,28 @@
 
 import Foundation
 
-struct Recipe: Identifiable, Codable {
-    var id: String { label }
-    let image: String
-    let label: String
+struct Recipe: Identifiable, Decodable {
+    var id: Int
+    let image: String?
+    let title: String
+    let readyInMinutes: Double
+    let sourceUrl: String
+    let usedIngredientCount: Int?
+    let usedIngredients: [IngredientInRecipe]?
+    let missedIngredientCount: Int?
+    let missedIngredients: [IngredientInRecipe]?
     let ingredients: [IngredientInRecipe]
-    var url: String
-    var calories: Double
-    var totalTime: Double
+
 }
+
+
+//id": 637942,
+//"title": "Chicken Arrozcaldo",
+//"image": "https://spoonacular.com/recipeImages/637942-312x231.jpg",
+//"imageType": "jpg",
+//"usedIngredientCount": 4,
+//"missedIngredientCount": 10,
+//"missedIngredients": [],
+//"usedIngredients": [],
+//"unusedIngredients": [],
+//"likes": 2
