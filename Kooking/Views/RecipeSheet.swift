@@ -14,7 +14,7 @@ struct RecipeSheet: View {
         VStack (alignment: .center) {
             AsyncImage(url: URL(string: recipe.image))
             Text(recipe.label)
-            IngredientList(ingredients: recipe.ingredients)
+            RecipeIngredientList(ingredients: recipe.ingredients)
             Text(recipe.url)
         }
     }

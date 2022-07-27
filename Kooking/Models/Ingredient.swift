@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 struct Ingredient: Identifiable, Codable {
-    let id: String
+    var id: String { name }
 
     let name: String
-    let image: String?
-    var measure: String?
-    var quantity: Double?
-    var weight: Double?
+    let image: String
+    var measure: String
+    var quantity: Double
+    var weight: Double
 }
