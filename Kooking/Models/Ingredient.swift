@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Ingredient: Identifiable, Codable {
     let id: String
-    
+
     let name: String
-    var type: String?
-    var quant: Double?
-    
+    let image: String?
+    var measure: String?
+    var quantity: Double?
+    var weight: Double?
 }
