@@ -13,6 +13,9 @@
 		A43DD13128916932002B8B6D /* IngredientsInRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD13028916932002B8B6D /* IngredientsInRecipe.swift */; };
 		A43DD1332891720B002B8B6D /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD1322891720B002B8B6D /* IngredientView.swift */; };
 		A43DD1352891759B002B8B6D /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD1342891759B002B8B6D /* IngredientList.swift */; };
+		A43DD137289177C8002B8B6D /* MyIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD136289177C8002B8B6D /* MyIngredient.swift */; };
+		A43DD139289178A6002B8B6D /* MyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD138289178A6002B8B6D /* MyIngredientView.swift */; };
+		A43DD13B28917A42002B8B6D /* MyIngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD13A28917A42002B8B6D /* MyIngredientList.swift */; };
 		A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A0EBF2890BFA5007153CF /* Ingredient.swift */; };
 		EE0304B12890AE39009BECEE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EE0304B02890AE39009BECEE /* .gitignore */; };
 		EE0304B52890B125009BECEE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B42890B125009BECEE /* GoogleSignIn */; };
@@ -36,6 +39,9 @@
 		A43DD13028916932002B8B6D /* IngredientsInRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsInRecipe.swift; sourceTree = "<group>"; };
 		A43DD1322891720B002B8B6D /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		A43DD1342891759B002B8B6D /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		A43DD136289177C8002B8B6D /* MyIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredient.swift; sourceTree = "<group>"; };
+		A43DD138289178A6002B8B6D /* MyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientView.swift; sourceTree = "<group>"; };
+		A43DD13A28917A42002B8B6D /* MyIngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientList.swift; sourceTree = "<group>"; };
 		A46A0EBF2890BFA5007153CF /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EE0304B82890B174009BECEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 				A46A0EBF2890BFA5007153CF /* Ingredient.swift */,
 				A43DD12A28916144002B8B6D /* Recipe.swift */,
 				A43DD13028916932002B8B6D /* IngredientsInRecipe.swift */,
+				A43DD136289177C8002B8B6D /* MyIngredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,6 +90,8 @@
 				A43DD12C28916400002B8B6D /* RecipeIngredientList.swift */,
 				A43DD1322891720B002B8B6D /* IngredientView.swift */,
 				A43DD1342891759B002B8B6D /* IngredientList.swift */,
+				A43DD138289178A6002B8B6D /* MyIngredientView.swift */,
+				A43DD13A28917A42002B8B6D /* MyIngredientList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,15 +237,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43DD12928916106002B8B6D /* RecipeSheet.swift in Sources */,
+				A43DD139289178A6002B8B6D /* MyIngredientView.swift in Sources */,
 				A43DD1352891759B002B8B6D /* IngredientList.swift in Sources */,
 				A43DD12D28916400002B8B6D /* RecipeIngredientList.swift in Sources */,
 				A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */,
+				A43DD137289177C8002B8B6D /* MyIngredient.swift in Sources */,
 				EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */,
 				A43DD12B28916144002B8B6D /* Recipe.swift in Sources */,
 				EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */,
 				A43DD1332891720B002B8B6D /* IngredientView.swift in Sources */,
 				EE4A403B2891689B00CDAC36 /* RecipesAPI.swift in Sources */,
 				EE0304BD2890B3D3009BECEE /* AuthenticationViewModel.swift in Sources */,
+				A43DD13B28917A42002B8B6D /* MyIngredientList.swift in Sources */,
 				A43DD13128916932002B8B6D /* IngredientsInRecipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
