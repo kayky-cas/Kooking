@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IngredientList: View {
+struct RecipeIngredientList: View {
     var ingredients: [IngredientInRecipe]
     
     var body: some View {
@@ -20,15 +20,15 @@ struct IngredientList: View {
     }
 }
 
-struct IngredientList_Previews: PreviewProvider {
+struct RecipeIngredientList_Previews: PreviewProvider {
     static var previews: some View {
-        let ingredients = [IngredientInRecipe(text: "6 bone-in chicken breast halves, or 6 chicken thighs and wings, skin-on",
+        let ingredients = [IngredientInRecipe(text: "cake",
                                               quantity: 6,
                                               measure: "half",
                                               food: "chicken breast",
-                                              weight: 522,
-                                               image: "https://www.edamam.com/food-img/093/093749f4c93e448119fc81976d2c3067.jpg")]
+                                              weight: 522)
+                                       ]
     
-        IngredientList(ingredients: ingredients)
+        RecipeIngredientList(ingredients: ingredients)
     }
 }

@@ -8,11 +8,11 @@
 import Foundation
 
 struct Recipe: Identifiable, Codable {
-    let id: String
-    let image: String?
+    var id: String { label }
+    let image: String
     let label: String
     let ingredients: [IngredientInRecipe]
-    var url: String?
+    var url: String
     var calories: Double
     var totalTime: Double
 }

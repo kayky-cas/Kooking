@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A43DD12928916106002B8B6D /* RecipeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD12828916106002B8B6D /* RecipeSheet.swift */; };
 		A43DD12B28916144002B8B6D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD12A28916144002B8B6D /* Recipe.swift */; };
-		A43DD12D28916400002B8B6D /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD12C28916400002B8B6D /* IngredientList.swift */; };
+		A43DD12D28916400002B8B6D /* RecipeIngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD12C28916400002B8B6D /* RecipeIngredientList.swift */; };
 		A43DD13128916932002B8B6D /* IngredientsInRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43DD13028916932002B8B6D /* IngredientsInRecipe.swift */; };
 		A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A0EBF2890BFA5007153CF /* Ingredient.swift */; };
 		EE0304B12890AE39009BECEE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EE0304B02890AE39009BECEE /* .gitignore */; };
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		A43DD12828916106002B8B6D /* RecipeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSheet.swift; sourceTree = "<group>"; };
 		A43DD12A28916144002B8B6D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		A43DD12C28916400002B8B6D /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		A43DD12C28916400002B8B6D /* RecipeIngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientList.swift; sourceTree = "<group>"; };
 		A43DD13028916932002B8B6D /* IngredientsInRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsInRecipe.swift; sourceTree = "<group>"; };
 		A46A0EBF2890BFA5007153CF /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			children = (
 				EE9687B92890A36D008AEC24 /* ContentView.swift */,
 				A43DD12828916106002B8B6D /* RecipeSheet.swift */,
-				A43DD12C28916400002B8B6D /* IngredientList.swift */,
+				A43DD12C28916400002B8B6D /* RecipeIngredientList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43DD12928916106002B8B6D /* RecipeSheet.swift in Sources */,
-				A43DD12D28916400002B8B6D /* IngredientList.swift in Sources */,
+				A43DD12D28916400002B8B6D /* RecipeIngredientList.swift in Sources */,
 				A46A0EC02890BFA5007153CF /* Ingredient.swift in Sources */,
 				EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */,
 				A43DD12B28916144002B8B6D /* Recipe.swift in Sources */,

@@ -13,5 +13,4 @@ struct IngredientInRecipe: Codable {
     var measure: String?
     var food: String
     var weight: Double?
-    var image: String?
 }
