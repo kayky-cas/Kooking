@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE0304B12890AE39009BECEE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EE0304B02890AE39009BECEE /* .gitignore */; };
+		EE0304B52890B125009BECEE /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B42890B125009BECEE /* GoogleSignIn */; };
+		EE0304B72890B125009BECEE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE0304B62890B125009BECEE /* GoogleSignInSwift */; };
+		EE0304BD2890B3D3009BECEE /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0304BC2890B3D3009BECEE /* Authentication.swift */; };
 		EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B72890A36D008AEC24 /* KookingApp.swift */; };
 		EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B92890A36D008AEC24 /* ContentView.swift */; };
 		EE9687BC2890A370008AEC24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9687BB2890A370008AEC24 /* Assets.xcassets */; };
@@ -20,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		EE0304B02890AE39009BECEE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EE0304B82890B174009BECEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE0304BC2890B3D3009BECEE /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		EE9687B42890A36D008AEC24 /* Kooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9687B72890A36D008AEC24 /* KookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KookingApp.swift; sourceTree = "<group>"; };
 		EE9687B92890A36D008AEC24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0304B72890B125009BECEE /* GoogleSignInSwift in Frameworks */,
 				EE9687C92890A446008AEC24 /* FirebaseAuth in Frameworks */,
+				EE0304B52890B125009BECEE /* GoogleSignIn in Frameworks */,
 				EE9687CB2890A446008AEC24 /* FirebaseFirestore in Frameworks */,
 				EE9687CD2890A446008AEC24 /* FirebaseStorage in Frameworks */,
 			);
@@ -48,6 +55,21 @@
 				EE9687B92890A36D008AEC24 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EE0304B22890B004009BECEE /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EE0304BC2890B3D3009BECEE /* Authentication.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		EE0304BB2890B3AE009BECEE /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 		EE9687AB2890A36D008AEC24 = {
@@ -70,10 +92,13 @@
 		EE9687B62890A36D008AEC24 /* Kooking */ = {
 			isa = PBXGroup;
 			children = (
+				EE0304BB2890B3AE009BECEE /* Environment */,
+				EE0304B22890B004009BECEE /* Libs */,
 				EE0304AF2890AAF5009BECEE /* Views */,
 				EE9687B72890A36D008AEC24 /* KookingApp.swift */,
 				EE9687BB2890A370008AEC24 /* Assets.xcassets */,
 				EE9687C52890A3CF008AEC24 /* GoogleService-Info.plist */,
+				EE0304B82890B174009BECEE /* Info.plist */,
 				EE9687BD2890A370008AEC24 /* Preview Content */,
 			);
 			path = Kooking;
@@ -107,6 +132,8 @@
 				EE9687C82890A446008AEC24 /* FirebaseAuth */,
 				EE9687CA2890A446008AEC24 /* FirebaseFirestore */,
 				EE9687CC2890A446008AEC24 /* FirebaseStorage */,
+				EE0304B42890B125009BECEE /* GoogleSignIn */,
+				EE0304B62890B125009BECEE /* GoogleSignInSwift */,
 			);
 			productName = Kooking;
 			productReference = EE9687B42890A36D008AEC24 /* Kooking.app */;
@@ -138,6 +165,7 @@
 			mainGroup = EE9687AB2890A36D008AEC24;
 			packageReferences = (
 				EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EE0304B32890B125009BECEE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = EE9687B52890A36D008AEC24 /* Products */;
 			projectDirPath = "";
@@ -169,6 +197,7 @@
 			files = (
 				EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */,
 				EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */,
+				EE0304BD2890B3D3009BECEE /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +328,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Kooking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kooking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -327,6 +357,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Kooking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kooking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -369,6 +400,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EE0304B32890B125009BECEE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -380,6 +419,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE0304B42890B125009BECEE /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE0304B32890B125009BECEE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		EE0304B62890B125009BECEE /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE0304B32890B125009BECEE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		EE9687C82890A446008AEC24 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EE9687C72890A446008AEC24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
