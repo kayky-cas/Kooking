@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import GoogleSignIn
 
-class Authentication: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     
     enum SignInState {
         case signedIn

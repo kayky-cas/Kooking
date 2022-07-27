@@ -11,12 +11,12 @@ import GoogleSignIn
 
 @main
 struct KookingApp: App {
-    @StateObject var auth = Authentication()
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
         
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(auth)
+                .environmentObject(authenticationViewModel)
         }
     }
 }
