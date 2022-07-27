@@ -69,4 +69,8 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    func getCurrentUser() -> GIDGoogleUser? {
+        return GIDSignIn.sharedInstance.currentUser
+    }
 }
