@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TabNavigationView: View {
     @EnvironmentObject var recipes: RecipesViewModel
-    
+    @EnvironmentObject var auth: AuthenticationViewModel
+
     var body: some View {
         TabView {
             NavigationView {
@@ -31,7 +32,7 @@ struct TabNavigationView: View {
             }
             
             NavigationView {
-                Text("Profile")
+                Text(auth.getCurrentUser()?.profile?.name ?? "You are not loged In")
                     .navigationTitle("Profile")
             }.tabItem {
                 Image(systemName: "person")
@@ -39,8 +40,7 @@ struct TabNavigationView: View {
             }
         }.onAppear {
             recipes.getRecipes()
-        }
-    }
+        }    }
 }
 
 struct TabNavigationView_Previews: PreviewProvider {

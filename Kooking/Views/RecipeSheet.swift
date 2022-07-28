@@ -15,7 +15,7 @@ struct RecipeSheet: View {
         GeometryReader { g in
             VStack(alignment: .leading) {
                 AsyncImage(
-                    url: URL(string: recipe!.image ??  "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png"),
+                    url: URL(string: recipe?.image ?? "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png"),
                     content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fill)
@@ -56,10 +56,10 @@ struct RecipeSheet: View {
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        let recipe = Recipe(id: 658725, image: "https://spoonacular.com/recipeImages/658725-556x370.jpg", title: "Rocky Road Ice Cream", readyInMinutes: 45, sourceUrl: "https://www.foodista.com/recipe/WGM3YMVS/rocky-road-ice-cream", usedIngredientCount: nil, usedIngredients: [], missedIngredientCount: nil, missedIngredients: nil, ingredients: [
-                IngredientInRecipe(id: 0, name: "brie", amount: 5, unit: "oz"),
-                IngredientInRecipe(id: 1, name: "chives", amount: 1, unit: "tablespoon")
-        ])
+        let recipe = Recipe(id: 658725, image: "https://spoonacular.com/recipeImages/658725-556x370.jpg", title: "Rocky Road Ice Cream", readyInMinutes: 45, sourceUrl: "https://www.foodista.com/recipe/WGM3YMVS/rocky-road-ice-cream", usedIngredients: [], missedIngredients: nil, ingredients: [
+            IngredientInRecipe(id: 0, name: "brie", amount: 5, unit: "oz"),
+            IngredientInRecipe(id: 1, name: "chives", amount: 1, unit: "tablespoon")
+    ])
         RecipeSheet(recipe: .constant(recipe))
             .padding()
             .previewInterfaceOrientation(.portrait)

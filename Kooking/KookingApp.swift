@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
-import FirebaseCore
+import Firebase
 import GoogleSignIn
 
 @main
 struct KookingApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var authenticationViewModel = AuthenticationViewModel()
     var recipesViewModel = RecipesViewModel()
     
     var body: some Scene {
         WindowGroup {
-            TabNavigationView()
+            ContentView()
                 .environmentObject(authenticationViewModel)
                 .environmentObject(recipesViewModel)
         }

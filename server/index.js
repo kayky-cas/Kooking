@@ -25,7 +25,7 @@ function transformInIngredients(ingredients) {
 app.get("/recipes", async (req, res) => {
   const data = await fecthInstanse.get(URL + "/random?number=10");
 
-  console.log("Request");
+  console.log("GET - /recipes");
 
   res.json(
     data.data.recipes.map((r) => {
@@ -49,6 +49,8 @@ app.get("/recipes", async (req, res) => {
 
 app.get("/recipes/ingredients/:ingredients", async (req, res) => {
   const ingredients = req.params["ingredients"];
+
+  console.log(`GET - /recipes/ingredients/${ingredients}`);
 
   const fetchedData = await fecthInstanse.get(
     URL +
@@ -77,9 +79,7 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
       image: r.image,
       readyInMinutes: r.readyInMinutes,
       sourceUrl: r.sourceUrl,
-      missedIngredientCount: recipe.missedIngredientCount,
       missedIngredients: transformInIngredients(recipe.missedIngredients),
-      usedIngredientCount: recipe.usedIngredientCount,
       usedIngredients: transformInIngredients(recipe.usedIngredients),
       ingredients: transformInIngredients(
         recipe.missedIngredients.concat(recipe.usedIngredients)
@@ -92,4 +92,4 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
 
 // const d = await fecthInstanse.get(URL + "/" + recipe.id + "/information");
 
-app.listen(3000);
+app.listen(3000, () => console.log("http://localhost:3000"));

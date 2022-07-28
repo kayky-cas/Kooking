@@ -16,8 +16,7 @@ class AuthenticationViewModel: ObservableObject {
         case signedOut
     }
     
-    @Published var state: SignInState = .signedOut
-    
+    @Published var state: SignInState = .signedOut    
     
     func signIn() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
@@ -49,12 +48,13 @@ class AuthenticationViewModel: ObservableObject {
         
         let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
         
-        Auth.auth().signIn(with: credential) { [unowned self] (_, error) in
+        Auth.auth().signIn(with: credential) { [unowned self] (data, error) in
             if let error = error {
               print(error.localizedDescription)
-            } else {
-                self.state = .signedIn
+                return
             }
+            
+            self.state = .signedIn
           }
     }
     
