@@ -77,9 +77,7 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
       image: r.image,
       readyInMinutes: r.readyInMinutes,
       sourceUrl: r.sourceUrl,
-      missedIngredientCount: recipe.missedIngredientCount,
       missedIngredients: transformInIngredients(recipe.missedIngredients),
-      usedIngredientCount: recipe.usedIngredientCount,
       usedIngredients: transformInIngredients(recipe.usedIngredients),
       ingredients: transformInIngredients(
         recipe.missedIngredients.concat(recipe.usedIngredients)

@@ -13,9 +13,9 @@ struct Recipe: Identifiable, Decodable {
     let title: String
     let readyInMinutes: Double
     let sourceUrl: String
-    let usedIngredientCount: Int?
+    var usedIngredientCount: Int? { usedIngredients?.count }
     let usedIngredients: [IngredientInRecipe]?
-    let missedIngredientCount: Int?
+    var missedIngredientCount: Int? { missedIngredients?.count }
     let missedIngredients: [IngredientInRecipe]?
     let ingredients: [IngredientInRecipe]
 
