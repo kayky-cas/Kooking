@@ -14,10 +14,10 @@ struct Recipe: Identifiable, Decodable {
     let readyInMinutes: Double
     let sourceUrl: String
     var usedIngredientCount: Int? { usedIngredients?.count }
-    let usedIngredients: [IngredientInRecipe]?
+    let usedIngredients: [Ingredient]?
     var missedIngredientCount: Int? { missedIngredients?.count }
-    let missedIngredients: [IngredientInRecipe]?
-    let ingredients: [IngredientInRecipe]
+    let missedIngredients: [Ingredient]?
+    let ingredients: [Ingredient]
 
 }
 

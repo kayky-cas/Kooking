@@ -11,12 +11,14 @@ struct ContentView: View {
     @EnvironmentObject var auth: AuthenticationViewModel
     
     var body: some View {
-        TabNavigationView()
-//        if (auth.state == .signedIn) {
-//            TabNavigationView()
-//        } else {
-//            LoginPage()
-//        }
+//        var ingredient = Ingredient(id: 1245, name: "Apple", amount: 0, unit: "")
+//        return AddIngredientSheet(ingredient: ingredient)
+//        TabNavigationView()
+        if (auth.state == .signedIn) {
+            TabNavigationView()
+        } else {
+            LoginPage()
+        }
     }
 }
 

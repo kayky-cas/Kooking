@@ -10,6 +10,15 @@ import SwiftUI
 struct TabNavigationView: View {
     @EnvironmentObject var recipes: RecipesViewModel
     @EnvironmentObject var auth: AuthenticationViewModel
+    
+    var ingredients = [
+        Ingredient(id: 0, name: "Apple", amount: 20, unit: ""),
+        Ingredient(id: 0, name: "Apple", amount: 20, unit: ""),
+        Ingredient(id: 0, name: "Apple", amount: 20, unit: ""),
+        Ingredient(id: 0, name: "Apple", amount: 20, unit: "")
+
+
+    ]
 
     var body: some View {
         TabView {
@@ -23,7 +32,7 @@ struct TabNavigationView: View {
             }
             
             NavigationView {
-                Text("Ingredients")
+                IngredientsView(ingredients: ingredients)
                     .navigationTitle("Ingredients")
                 
             }.tabItem {
@@ -32,7 +41,7 @@ struct TabNavigationView: View {
             }
             
             NavigationView {
-                Text(auth.getCurrentUser()?.profile?.name ?? "You are not loged In")
+                ProfileView(user: auth.currentUser)
                     .navigationTitle("Profile")
             }.tabItem {
                 Image(systemName: "person")
@@ -40,12 +49,14 @@ struct TabNavigationView: View {
             }
         }.onAppear {
             recipes.getRecipes()
-        }    }
+        }
+    }
 }
 
 struct TabNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         TabNavigationView()
             .environmentObject(RecipesViewModel())
+            .environmentObject(AuthenticationViewModel())
     }
 }

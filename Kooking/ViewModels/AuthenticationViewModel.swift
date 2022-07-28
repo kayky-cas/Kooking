@@ -16,7 +16,8 @@ class AuthenticationViewModel: ObservableObject {
         case signedOut
     }
     
-    @Published var state: SignInState = .signedOut    
+    @Published var state: SignInState = .signedOut
+    @Published var currentUser: User? = nil
     
     func signIn() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
@@ -55,6 +56,14 @@ class AuthenticationViewModel: ObservableObject {
             }
             
             self.state = .signedIn
+            
+            let googleUser = GIDSignIn.sharedInstance.currentUser
+            
+            if googleUser?.profile != nil {
+                self.currentUser = User(id: (googleUser?.userID)!, name: googleUser?.profile?.name ?? "")
+            }
+        
+            return
           }
     }
     
@@ -68,9 +77,5 @@ class AuthenticationViewModel: ObservableObject {
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func getCurrentUser() -> GIDGoogleUser? {
-        return GIDSignIn.sharedInstance.currentUser
     }
 }

@@ -1,17 +1,15 @@
 //
-//  Ingredient.swift
+//  IngredientsInRecipe.swift
 //  Kooking
 //
-//  Created by Giancarlo Mena on 26/07/22.
+//  Created by Giancarlo Mena on 27/07/22.
 //
 
 import Foundation
 
 struct Ingredient: Identifiable, Codable {
-    let id: String
-    let amount: Double
-    let unitLong: String
-    let unitShort: String
+    let id: Int
     let name: String
-    let original: String
+    var amount: Double
+    var unit: String
 }
