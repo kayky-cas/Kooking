@@ -15,7 +15,7 @@ struct RecipeUnitView: View {
         GeometryReader { g in
             HStack {
                 AsyncImage(
-                    url: URL(string: Bool.random() ? recipe.image ?? "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png" : "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png"),
+                    url: URL(string: recipe.image ?? "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled.png"),
                     content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fill)
@@ -31,11 +31,16 @@ struct RecipeUnitView: View {
                     Text(recipe.title)
                         .font(.title3)
                         .bold()
+                        .lineLimit(1)
                         .padding(.top, 10)
+                    Text("\(recipe.readyInMinutes, specifier: "%.0f") min")
+                        .foregroundColor(.blue)
+                        .italic()
                     if recipe.usedIngredientCount != nil {
-                        Text("You have \(recipe.usedIngredientCount! < recipe.ingredients.count ? String.init(format: "%d of", recipe.usedIngredientCount!) : "all") the ingredients used in this recipe!")
+                        Text("You have \(recipe.usedIngredientCount! < recipe.ingredients.count ? String.init(format: "%d of", recipe.usedIngredientCount!) : "all") the ingredients!")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(recipe.usedIngredientCount! < recipe.ingredients.count ? .gray : .green)
+                            .lineLimit(1)
                     }
                     Spacer()
                 }.padding(.leading, 20)

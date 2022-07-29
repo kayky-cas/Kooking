@@ -27,12 +27,29 @@ struct LoginPage: View {
                     .font(.callout)
                     .multilineTextAlignment(.center)
                 
-                GoogleSignInButton {
+//                GoogleSignInButton {
+//                    auth.signIn()
+//                }
+//                .frame(width: 150)
+//                .aspectRatio(contentMode: .fit)
+//                .padding()
+                
+                Button {
                     auth.signIn()
-                }
-                .frame(width: 150)
-                .aspectRatio(contentMode: .fit)
-                .padding()
+                } label: {
+                    HStack {
+                        Image("google-icon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Spacer()
+                        Text("Sign in with google")
+                    }.padding(.horizontal)
+                }.buttonStyle(.plain).frame(width: 250, height: 50)
+                    .aspectRatio(contentMode: .fit)
+                    .background(Color.white)
+                    .clipShape(Capsule())
+                    .shadow(radius: 5, y: 6)
+                    .padding(.top, 30)
             }
             Spacer()
         }

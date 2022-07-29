@@ -14,18 +14,9 @@ struct ProfileView: View {
     var body: some View {
         if (user != nil) {
             VStack {
-                Text(user!.name)
-                
-                Text("My ingredients")
-                List {
-                    ForEach(0..<user!.ingredients.count, id: \.self) {
-                        i in
-                        IngredientUnitView(ingredient: user!.ingredients[i])
-                    }
-                }.toolbar {
-                    EditButton()
-                }
-            }
+                Text("\(user!.name)'s Ingredients")
+                MyIngredientsList()
+            }.padding(.top, 20)
         }
         
         else {

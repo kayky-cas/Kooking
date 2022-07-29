@@ -20,6 +20,7 @@
 		EE415B702892CF1300935151 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415B6F2892CF1300935151 /* IngredientsView.swift */; };
 		EE415B722892D2D700935151 /* AddIngredientSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415B712892D2D700935151 /* AddIngredientSheet.swift */; };
 		EE415B742892DC0200935151 /* MetricUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415B732892DC0100935151 /* MetricUnits.swift */; };
+		EE415B772893026E00935151 /* MyIngredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415B762893026E00935151 /* MyIngredientsList.swift */; };
 		EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B72890A36D008AEC24 /* KookingApp.swift */; };
 		EE9687BA2890A36D008AEC24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9687B92890A36D008AEC24 /* ContentView.swift */; };
 		EE9687BC2890A370008AEC24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9687BB2890A370008AEC24 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		EE415B6F2892CF1300935151 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		EE415B712892D2D700935151 /* AddIngredientSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientSheet.swift; sourceTree = "<group>"; };
 		EE415B732892DC0100935151 /* MetricUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricUnits.swift; sourceTree = "<group>"; };
+		EE415B762893026E00935151 /* MyIngredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIngredientsList.swift; sourceTree = "<group>"; };
 		EE9687B42890A36D008AEC24 /* Kooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9687B72890A36D008AEC24 /* KookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KookingApp.swift; sourceTree = "<group>"; };
 		EE9687B92890A36D008AEC24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				EE415B6B2892C9AA00935151 /* ProfileView.swift */,
 				EE415B6F2892CF1300935151 /* IngredientsView.swift */,
 				EE415B712892D2D700935151 /* AddIngredientSheet.swift */,
+				EE415B762893026E00935151 /* MyIngredientsList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				A43DD12B28916144002B8B6D /* Recipe.swift in Sources */,
 				EE9687B82890A36D008AEC24 /* KookingApp.swift in Sources */,
 				EE415B682892AF8200935151 /* LoginPage.swift in Sources */,
+				EE415B772893026E00935151 /* MyIngredientsList.swift in Sources */,
 				EECC9F272891C315006B3F49 /* RecipeSheet.swift in Sources */,
 				EECC9F252891C2DA006B3F49 /* RecipesListView.swift in Sources */,
 				EECC9F232891C2A6006B3F49 /* TabNavigationView.swift in Sources */,

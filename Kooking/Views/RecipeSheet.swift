@@ -31,6 +31,10 @@ struct RecipeSheet: View {
                         .font(.title)
                         .padding(.bottom, 10)
                         
+                    Text("\(recipe!.readyInMinutes, specifier: "%.0f") minutes")
+                        .font(.title2)
+                        .foregroundColor(.blue)
+                        .italic()
                     
                     Divider()
                     
@@ -41,7 +45,10 @@ struct RecipeSheet: View {
                         ForEach(0..<recipe!.ingredients.count, id: \.self) {
                             i in
                             
-                            Text("- \(recipe!.ingredients[i].name): \(String.init(format: "%.2f", recipe!.ingredients[i].amount)) \(recipe!.ingredients[i].unit)")
+                            Text("- \(recipe!.ingredients[i].name): ")
+                                .bold()
+                            + Text("\(String.init(format: "%.2f", recipe!.ingredients[i].amount)) \(translate(unit:recipe!.ingredients[i].unit))")
+                                .italic()
                         }
                     }.padding(.leading, 20)
                     
@@ -51,6 +58,26 @@ struct RecipeSheet: View {
                 }.padding()
             }
         }
+    }
+    
+    func translate(unit: String) -> String {
+        if (unit == "tablespoon") {
+            return "table spoon"
+        }
+        
+        if (unit == "tablespoons") {
+            return "table spoons"
+        }
+        
+        if (unit == "teaspoon") {
+            return "tea spoon"
+        }
+        
+        if (unit == "teaspoons") {
+            return "tea spoons"
+        }
+        
+        return unit
     }
 }
 

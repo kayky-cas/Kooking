@@ -24,7 +24,8 @@ struct RecipesListView: View {
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
-        }.listStyle(PlainListStyle())
+        }
+//        .listStyle(PlainListStyle())
         .sheet(isPresented: $showRecipeSheet) {
             RecipeSheet(recipe: $actualRecipe)
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient: Identifiable, Codable {
+struct Ingredient: Identifiable, Codable, Hashable {
     let id: Int
     let name: String
     var amount: Double

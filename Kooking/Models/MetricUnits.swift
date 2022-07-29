@@ -8,6 +8,6 @@
 import Foundation
 
 enum MetricUnit: String, CaseIterable, Identifiable {
-    case oz, m, cm, g, kg, l, ml
+    case oz, g, kg, l, ml, m, cm, unit
     var id: Self { self }
 }

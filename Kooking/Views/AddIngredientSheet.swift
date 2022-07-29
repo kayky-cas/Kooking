@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct AddIngredientSheet: View {
-    var ingredient: Ingredient
+    @Binding var ingredient: Ingredient
     
     @State var amount: Double?
     @State var unit: MetricUnit = .oz
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @EnvironmentObject var auth: AuthenticationViewModel
+    @EnvironmentObject var recipe: RecipesViewModel
     
     
     var body: some View {
@@ -24,7 +27,7 @@ struct AddIngredientSheet: View {
                         ForEach(MetricUnit.allCases) { unit in
                             Text(unit.rawValue.capitalized)
                         }
-                    }
+                    }.pickerStyle(.segmented)
                     
                     TextField("Digit the amount of \(unit.rawValue)", value: $amount, format: .number)
 //                        .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -41,16 +44,12 @@ struct AddIngredientSheet: View {
                     newIngredient.amount = amount ?? 0
                     
                     auth.currentUser?.ingredients.append(newIngredient)
+                    
+                    recipe.getRecipesByIngredients(ingredients: auth.currentUser?.ingredients ?? [])
+                    
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Add")
-                        .font(.body)
-
-                }
-                Spacer()
-                Button{
-
-                } label: {
-                    Text("Cancel")
                         .font(.body)
 
                 }
@@ -64,7 +63,7 @@ struct AddIngredientSheet: View {
 struct AddIngredientSheet_Previews: PreviewProvider {
     static var previews: some View {
         let ingredient = Ingredient(id: 1245, name: "Apple", amount: 0, unit: "")
-        AddIngredientSheet(ingredient: ingredient)
+        AddIngredientSheet(ingredient: .constant(ingredient))
             .frame(height: 200)
     }
 }

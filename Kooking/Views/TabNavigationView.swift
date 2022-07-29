@@ -11,6 +11,8 @@ struct TabNavigationView: View {
     @EnvironmentObject var recipes: RecipesViewModel
     @EnvironmentObject var auth: AuthenticationViewModel
     
+    @State var myRecipes = false
+    
     var ingredients = [
         Ingredient(id: 0, name: "Apple", amount: 20, unit: ""),
         Ingredient(id: 0, name: "Apple", amount: 20, unit: ""),
@@ -24,15 +26,21 @@ struct TabNavigationView: View {
         TabView {
             NavigationView {
                 
-                RecipesListView(recipes: recipes.recipes)
-                    .navigationTitle("Recipes")
+                VStack {
+                    Picker("Recipe Type", selection: $myRecipes) {
+                        Text("All").tag(false)
+                        Text("With my ingredients").tag(true)
+                    }.pickerStyle(.segmented)
+                    RecipesListView(recipes: myRecipes ? recipes.myRecipes : recipes.recipes)
+                        .navigationTitle("Recipes")
+                }
             }.tabItem {
                 Image(systemName: "book")
                 Text("Recipes")
             }
             
             NavigationView {
-                IngredientsView(ingredients: ingredients)
+                IngredientsView(ingredients: recipes.allIngredients)
                     .navigationTitle("Ingredients")
                 
             }.tabItem {
@@ -49,6 +57,7 @@ struct TabNavigationView: View {
             }
         }.onAppear {
             recipes.getRecipes()
+            recipes.getIngredients()
         }
     }
 }

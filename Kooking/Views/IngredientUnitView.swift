@@ -13,7 +13,7 @@ struct IngredientUnitView: View {
     var body: some View {
         GeometryReader { g in
             HStack {
-                Text(ingredient.name)
+                Text(ingredient.name.capitalized)
                     .bold()
                 Spacer()
                 Text("\(ingredient.amount, specifier: "%.2f") \(ingredient.unit)")

@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const axios = require("axios").default;
+const fs = require("fs");
 
 const app = express();
 
@@ -23,7 +24,7 @@ function transformInIngredients(ingredients) {
 }
 
 app.get("/recipes", async (req, res) => {
-  const data = await fecthInstanse.get(URL + "/random?number=10");
+  const data = await fecthInstanse.get(URL + "/random?number=30");
 
   console.log("GET - /recipes");
 
@@ -54,7 +55,7 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
 
   const fetchedData = await fecthInstanse.get(
     URL +
-      "/findByIngredients?ignorePantry=true&number=10&ingredients=" +
+      "/findByIngredients?ranking=2&ignorePantry=true&ingredients=" +
       ingredients
   );
 
@@ -63,6 +64,8 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
   for (const recipe of fetchedData.data) {
     ids += recipe.id + ",";
   }
+
+  console.log(fetchedData.data);
 
   const fecthedRecipes = await fecthInstanse.get(
     URL +
@@ -88,6 +91,27 @@ app.get("/recipes/ingredients/:ingredients", async (req, res) => {
   });
 
   res.json(recipes);
+});
+
+app.get("/ingredients", async (req, res) => {
+  console.log(`GET - /ingredients/`);
+
+  fs.readFile("./ingresients.me", (err, file) => {
+    const ingrStr = file.toString().split("\n");
+
+    const arr = ingrStr.map((v) => {
+      const spl = v.split(";");
+
+      return {
+        id: parseInt(spl[1]),
+        name: spl[0],
+        amount: 0,
+        unit: "",
+      };
+    });
+
+    res.json(arr);
+  });
 });
 
 // const d = await fecthInstanse.get(URL + "/" + recipe.id + "/information");

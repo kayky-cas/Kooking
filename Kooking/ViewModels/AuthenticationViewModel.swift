@@ -10,7 +10,6 @@ import Firebase
 import GoogleSignIn
 
 class AuthenticationViewModel: ObservableObject {
-    
     enum SignInState {
         case signedIn
         case signedOut
