@@ -19,11 +19,11 @@ struct KookingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    if authenticationViewModel.currentUser != nil {
-                        authenticationViewModel.state = .signedIn
-                    }
-                  }
+//                .onAppear {
+//                    if authenticationViewModel.currentUser != nil {
+//                        authenticationViewModel.state = .signedIn
+//                    }
+//                  }
                 .environmentObject(authenticationViewModel)
                 .environmentObject(recipesViewModel)
         }

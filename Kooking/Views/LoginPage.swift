@@ -42,7 +42,7 @@ struct LoginPage: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         Spacer()
-                        Text("Sign in with google")
+                        Text("Sign in with Google")
                     }.padding(.horizontal)
                 }.buttonStyle(.plain).frame(width: 250, height: 50)
                     .aspectRatio(contentMode: .fit)

@@ -47,7 +47,7 @@ struct RecipeSheet: View {
                             
                             Text("- \(recipe!.ingredients[i].name): ")
                                 .bold()
-                            + Text("\(String.init(format: "%.2f", recipe!.ingredients[i].amount)) \(translate(unit:recipe!.ingredients[i].unit))")
+                            + Text("\(String.init(format: "%.2f", recipe!.ingredients[i].amount)) \(recipe!.ingredients[i].unit)")
                                 .italic()
                         }
                     }.padding(.leading, 20)
@@ -60,25 +60,6 @@ struct RecipeSheet: View {
         }
     }
     
-    func translate(unit: String) -> String {
-        if (unit == "tablespoon") {
-            return "table spoon"
-        }
-        
-        if (unit == "tablespoons") {
-            return "table spoons"
-        }
-        
-        if (unit == "teaspoon") {
-            return "tea spoon"
-        }
-        
-        if (unit == "teaspoons") {
-            return "tea spoons"
-        }
-        
-        return unit
-    }
 }
 
 struct RecipeView_Previews: PreviewProvider {
